@@ -62,7 +62,7 @@ log=logs/train_${dataset}__${run_name}.log.txt
 # ep_1=0.1
 # ep_2=10
 # ep_3=5
-python3 -u mycode.py \
+python3 -u SDPGNP.py \
     --dataset $dataset \
     --encoder $encoder -k $k --gnn_dim $gnndim -elr $elr -dlr $dlr -bs $bs --seed $seed -mbs ${mbs} --unfreeze_epoch ${unfreeze_epoch} --encoder_layer=${encoder_layer} -sl ${max_seq_len} --max_node_num ${max_node_num} \
     --n_epochs $n_epochs --max_epochs_before_stop ${max_epochs_before_stop} \
